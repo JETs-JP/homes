@@ -1,0 +1,15 @@
+{
+  "name": "homes",
+  "version": "1.0.0",
+  "description": "Homes smart speaker bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hhiroshell",
+  "license": "MIT",
+  "dependencies": {
+    "bot-express": "0.0.112",
+    "express": "^4.15.3"
+  }
+}
