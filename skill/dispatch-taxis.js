@@ -11,12 +11,12 @@ module.exports = class DispatchTaxis {
             text: `依頼が完了しました。日本交通から配車します。到着予定時刻は14:30です。こちらの車とドライバーが伺います。`
         }, {
             type: 'image',
-            originalContentUrl: 'https://387329f5.ngrok.io/images/taxi.jpg',
-            previewImageUrl: 'https://387329f5.ngrok.io/images/taxi.jpg'
+            originalContentUrl: 'https://homes.ngrok.hhiroshell.xyz/images/taxi.jpg',
+            previewImageUrl: 'https://homes.ngrok.hhiroshell.xyz/images/taxi.jpg'
         }, {
             type: 'image',
-            originalContentUrl: 'https://387329f5.ngrok.io/images/driver.jpg',
-            previewImageUrl: 'https://387329f5.ngrok.io/images/driver.jpg'
+            originalContentUrl: 'https://homes.ngrok.hhiroshell.xyz/images/driver.jpg',
+            previewImageUrl: 'https://homes.ngrok.hhiroshell.xyz/images/driver.jpg'
         }];
         return bot.reply(messages).then(
             (response) => {
