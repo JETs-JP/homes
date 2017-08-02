@@ -25,9 +25,19 @@ module.exports = class ShowGarbageDay {
 
     // パラメーターが全部揃ったら実行する処理を記述します。
     finish(bot, event, context, resolve, reject) {
-        let messages = [{
-            text: `${context.confirmed.garbage_type}`
-        }];
+        let garbage_day = null;
+        if (context.confirmed.garbage_type === '可燃') {
+            garbage_day = '毎週水曜、土曜';
+        } else if (context.confirmed.garbage_type === '不燃') {
+            garbage_day = '第1、第3 火曜';
+        } else if (context.confirmed.garbage_type === '資源') {
+            garbage_day = '毎週月曜';
+        } else if (context.confirmed.garbage_type === 'プラスチック') {
+            garbage_day = '毎週木曜';
+        }
+        let messages = [
+            {text: `麹町一丁目偶数番地の${context.confirmed.garbage_type}ゴミ収集日は、` + garbage_day + `です`}
+        ];
         return bot.reply(messages).then(
             (response) => {
                 return resolve();
