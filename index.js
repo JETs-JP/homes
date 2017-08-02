@@ -10,7 +10,7 @@ let app = express();
 /*
  * Static contents
  */
-app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 /*
  * Middleware Configuration
