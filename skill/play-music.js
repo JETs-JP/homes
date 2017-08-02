@@ -43,12 +43,7 @@ module.exports = class PlayMusic {
                     text: "どんなのがいいですか？"
                 },
                 reaction: (error, value, context, resolve, reject) => {
-                    if (!error){
-                        bot.queue([{
-                            text: "おまかせください！"
-                        }]);
-                        return resolve();
-                    } else {
+                    if (error) {
                         bot.change_message_to_confirm("genre", {
                             text: "例えばこんなのはどうでしょう？",
                             quick_replies: [
@@ -57,8 +52,8 @@ module.exports = class PlayMusic {
                                 {content_type:"text", title:"クラシック", payload:"classical"}
                             ]
                         });
-                        return resolve();
                     }
+                    return resolve();
                 }
             }
         };
