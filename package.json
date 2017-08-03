@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "bot-express": "0.0.112",
+    "date-with-offset": "^1.0.1",
     "express": "^4.15.3"
   }
 }
