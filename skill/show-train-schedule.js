@@ -14,6 +14,8 @@ var train_type_dsd = [
     "[普通]鷺沼行"
 ];
 
+const DateWithOffset = require( 'date-with-offset' );
+
 const trainSchedule = class {
     static get(limit, dest_ascending) {
         var schedule = {};
@@ -25,14 +27,15 @@ const trainSchedule = class {
             schedule = "【渋谷方面行】";
             type = train_type_dsd;
         }
-        var date = new Date();
+        var date = new DateWithOffset(540);
         for (var i = 0; i < limit; i++) {
             var max = 5;
             var min = 3;
             var d = Math.floor(Math.random() * (max + 1 - min)) + min;
             date.setMinutes(date.getMinutes() + d);
             schedule += ("\n" +
-                date.toLocaleTimeString('ja-JP').substr(0, 5) + " " +
+                ("0" + date.getHours()).slice(-2) + ":" +
+                ("0" + date.getMinutes()).slice(-2) + " " +
                 type[Math.floor(Math.random() * type.length)]);
         }
         return schedule;
