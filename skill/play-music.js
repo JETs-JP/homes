@@ -12,8 +12,6 @@ const GENRE_MAPPINGS = [
     {label: "classic", code: "classical"}
 ];
 
-
-
 const volumio = class {
     static play(playlist) {
         var cmd;

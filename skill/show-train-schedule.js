@@ -14,7 +14,7 @@ var train_type_dsd = [
     "[普通]鷺沼行"
 ];
 
-const DateWithOffset = require( 'date-with-offset' );
+const DateWithOffset = require('date-with-offset');
 
 const trainSchedule = class {
     static get(limit, dest_ascending) {
